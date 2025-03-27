@@ -1,0 +1,18 @@
+{
+  "name": "all-exercises-attempt",
+  "version": "1.0.0",
+  "description": "- simple express server to serve static HTML, CSS and JS files\r - using commonjs",
+  "main": "index.js",
+  "scripts": {
+    "guess": "node index.js 50", 
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
