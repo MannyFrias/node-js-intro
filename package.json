@@ -4,6 +4,8 @@
   "description": "- simple express server to serve static HTML, CSS and JS files\r - using commonjs",
   "main": "index.js",
   "scripts": {
+    "file": "node index.js ./node-js-intro/node-js-intro/text.txt", 
+    "pali": "node index.js racecar", 
     "guess": "node index.js 50", 
     "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
