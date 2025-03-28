@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
 
 const app = express();
 const port = 3000;
@@ -19,11 +20,11 @@ app.listen(port, () => {
   console.log("Hello World");
 });
 
-//exercise2
+//exercise2 commandline args
 // const args = process.argv.slice(2);
 // console.log("args =", args);
 
-// exercise3
+// exercise3 simple calc
 // const args = process.argv.slice(2);
 // const [num1, operator, num2] = args;
 
@@ -53,7 +54,11 @@ app.listen(port, () => {
 
 // console.log(`Result: ${result}`);
 
+<<<<<<< HEAD
 // exercise4
+=======
+// exercise4 number guess
+>>>>>>> 94c3b0abee6d5b7fc8d65b66c71f5820c55d1d98
 // const args = process.argv.slice(1);
 // const [input] = args;
 
@@ -68,6 +73,10 @@ app.listen(port, () => {
 //   console.log("computerChoice =", computerChoice);
 //   console.log("input =", input);
 // }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 94c3b0abee6d5b7fc8d65b66c71f5820c55d1d98
 // exercise5 palindrome check
 // const args = process.argv.slice(2);
 // const [input] = args;
@@ -81,6 +90,7 @@ app.listen(port, () => {
 // console.log(answer);
 
 // exercise6 file reader
+<<<<<<< HEAD
 // const filePath = process.argv[2];
 // if (!filePath) {
 //   console.log("invalid filepath as argument");
@@ -94,3 +104,18 @@ app.listen(port, () => {
 //   }
 //   console.log(data);
 // });
+=======
+const filePath = process.argv[2];
+if (!filePath) {
+  console.log("invalid filepath as argument");
+  process.exit(1);
+}
+
+fs.readFile(filePath, "utf8", (err, data) => {
+  if (err) {
+    console.error("Error has occured", err);
+    process.exit(1);
+  }
+  console.log(data);
+});
+>>>>>>> 94c3b0abee6d5b7fc8d65b66c71f5820c55d1d98
