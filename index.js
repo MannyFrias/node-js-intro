@@ -2,12 +2,17 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-
 const port = 3000;
 
-app.get("/ping", (req, res) => {
+// https://google.com/port
+
+// Routes - localhost:3000/
+// Routes - localhost:3000/about/personal/info
+// * used as "wild card" or anything or everything. *Important*
+// SELECT * FROM users;
+app.get("*", (req, res) => {
   // console.log("req =", req);
-  return res.send("pong");
+  return res.send("hello world");
 });
 
 app.listen(port, () => {
@@ -49,17 +54,43 @@ app.listen(port, () => {
 // console.log(`Result: ${result}`);
 
 // exercise4
-const args = process.argv.slice(1);
-const [input] = args;
+// const args = process.argv.slice(1);
+// const [input] = args;
 
-const computerChoice = [Math.floor(Math.random() * 100)];
+// const computerChoice = [Math.floor(Math.random() * 100)];
 
-if (input === computerChoice) {
-  console.log("You Win!");
-  console.log("computerChoice =", computerChoice);
-  console.log("input =", input);
-} else {
-  console.log("You Lose!");
-  console.log("computerChoice =", computerChoice);
-  console.log("input =", input);
-}
+// if (input === computerChoice) {
+//   console.log("You Win!");
+//   console.log("computerChoice =", computerChoice);
+//   console.log("input =", input);
+// } else {
+//   console.log("You Lose!");
+//   console.log("computerChoice =", computerChoice);
+//   console.log("input =", input);
+// }
+// exercise5 palindrome check
+// const args = process.argv.slice(2);
+// const [input] = args;
+// console.log("input =", input);
+// const revInput = [...input].reverse().join("");
+// console.log("revInput=", revInput);
+// const answer =
+//   JSON.stringify(input) === JSON.stringify(revInput)
+//     ? "Palindrome"
+//     : "Not a Palindrome";
+// console.log(answer);
+
+// exercise6 file reader
+// const filePath = process.argv[2];
+// if (!filePath) {
+//   console.log("invalid filepath as argument");
+//   process.exit(1);
+// }
+
+// fs.readFile(filePath, "utf8", (err, data) => {
+//   if (err) {
+//     console.error("Error has occured", err);
+//     process.exit(1);
+//   }
+//   console.log(data);
+// });
